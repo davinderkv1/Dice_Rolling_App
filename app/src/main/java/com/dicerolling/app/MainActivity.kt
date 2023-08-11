@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         resultTextView.text = "Roll Result 1: $result1  Roll Result 2: $result2"
-        saveRolledValue("Result 1:"+result1.toString()+"   Result 2: "+result2.toString())
+        saveRolledValue("Result 1: "+result1.toString()+"   Result 2: "+result2.toString())
     }
 
     private fun saveRolledValue(value: String) {
