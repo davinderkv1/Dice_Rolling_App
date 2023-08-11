@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +40,14 @@ class MainActivity : AppCompatActivity() {
 
         rollButton.setOnClickListener {
             rollDice()
+        }
+        val darkThemeSwitch = findViewById<Switch>(R.id.darkThemeSwitch)
+        darkThemeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
 
         rollTwiceButton.setOnClickListener {

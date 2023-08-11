@@ -1,50 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/diceSelectorSpinner"
-        android:layout_width="match_parent"
+    <Switch
+        android:id="@+id/darkThemeSwitch"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"/>
-    <EditText
-        android:id="@+id/customSidesEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:hint="Enter sides for custom die"
-        android:inputType="number"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false" />
 
-    <Button
-        android:id="@+id/rollButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Roll Once" />
+        android:layout_below="@id/darkThemeSwitch"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/rollTwiceButton"
-        android:layout_width="match_parent"
-        android:layout_marginTop="25dp"
-        android:layout_height="wrap_content"
-        android:text="Roll Twice" />
+        <Spinner
+            android:id="@+id/diceSelectorSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"/>
-    <ListView
-        android:id="@+id/storedValuesListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/customSidesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter sides for custom die"
+            android:inputType="number"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/rollButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Roll Once" />
+
+        <Button
+            android:id="@+id/rollTwiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Roll Twice" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"/>
+
+        <ListView
+            android:id="@+id/storedValuesListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>
